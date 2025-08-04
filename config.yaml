@@ -1,0 +1,58 @@
+datasets:
+  - name: cifar10
+  - name: cifar100
+  - name: mnist
+  - name: fashion_mnist
+  
+
+models:
+  - name: resnet
+    type: torchvision_resnet
+  - name: resnet50
+    type: torchvision_resnet
+  - name: vit
+    type: transformers_vit
+  - name: swin
+    type: transformers_swin
+
+augmentations:
+  - name: flip
+    type: RandomHorizontalFlip
+  - name: rotate
+    type: RandomRotation
+  - name: color_jitter
+    type: ColorJitter
+  - name: gaussian_blur
+    type: GaussianBlur
+  - name: random_erasing
+    type: RandomErasing
+  - name: cutout
+    type: Cutout
+  - name: mixup
+    type: Mixup
+  - name: cutmix
+    type: CutMix
+  - name: autoaugment
+    type: AutoAugment
+  - name: randaugment
+    type: RandAugment
+  - name: trivialaugment
+    type: TrivialAugmentWide
+  - name: augmix
+    type: AugMix
+  - name: random_perspective
+    type: RandomPerspective
+  - name: random_resized_crop
+    type: RandomResizedCrop
+  - name: affine
+    type: RandomAffine
+  - name: none
+    type: None
+
+evaluation_methods:
+  - name: accuracy
+  - name: precision
+  - name: recall
+  - name: f1
+
+
